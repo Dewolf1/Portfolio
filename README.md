@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Futuristic AI Portfolio
 
-## Getting Started
+A premium, interactive portfolio featuring a 3D robot, cybernetic design, and real-time responsiveness. Built for **Mohd Adeeb** (Dewolf1).
 
-First, run the development server:
+## 🚀 Live Demo
+Managed by Render: [mohdadeeb.onrender.com](https://mohdadeeb.onrender.com)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🛠 Tech Stack
+- **Framework**: Next.js 16 (App Router)
+- **Styling**: Tailwind CSS 4 (Vanilla CSS Refinements)
+- **3D**: Spline + React Spline
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Deployment**: Render (Static Site)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📋 Requirements
+- **Node.js**: v20 or higher
+- **Package Manager**: npm or yarn
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 💻 Local Development
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Dewolf1/portfolio.git
+   cd portfolio
+   ```
 
-## Learn More
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+3. **Run development server**:
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚢 Render Deployment (Live Site)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To host this as a **Static Site** on Render.com:
 
-## Deploy on Vercel
+1. **Connect your GitHub** to Render.
+2. **Create a New Static Site**.
+3. **Build Settings**:
+   - **Build Command**: `npm run build`
+   - **Publish Directory**: `out` (Note: Ensure `next.config.js` has `output: 'export'`)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+> [!IMPORTANT]
+> Since this project is highly interactive with 3D elements, ensure the build environment has sufficient memory.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📁 Project Structure
+- `/app`: Next.js pages and globals
+- `/components/ui`: Custom cyber-themed components (Card, Spotlight, SplineScene)
+- `/public`: Static assets including `resume_python.pdf`
+- `/lib`: Utility functions
