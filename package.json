@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "render-build": "npm install --legacy-peer-deps && next build",
+    "render-build": "node -v && npm -v && npm install --legacy-peer-deps && next build",
     "start": "next start",
     "lint": "eslint"
   },
