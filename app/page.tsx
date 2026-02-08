@@ -87,7 +87,7 @@ export default function Home() {
               <div className="inline-block px-4 py-2 border border-cyan-500/50 bg-cyan-500/5 rounded-sm text-xs font-mono tracking-[0.2em] text-cyan-400 uppercase">
                 System Initializing... Python // AI // Lead
               </div>
-              <h1 className="text-6xl md:text-8xl font-black tracking-tighter leading-none">
+              <h1 className="text-5xl sm:text-7xl md:text-8xl font-black tracking-tighter leading-none">
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(6,182,212,0.3)]">
                   MOHD
                 </span>
@@ -115,7 +115,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative h-[600px] lg:h-[700px] flex items-center justify-center">
+            <div className="relative h-[400px] sm:h-[500px] lg:h-[700px] flex items-center justify-center">
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-600/10 blur-[100px] rounded-full" />
               <div className="w-full h-full relative z-10 group transition-all duration-500">
                 <div className="w-full h-full overflow-hidden transition-all">
@@ -140,7 +140,7 @@ export default function Home() {
             {[{ v: '8.23', l: 'GPA', c: 'from-cyan-400 to-blue-600' }, { v: '4+', l: 'Certifications', c: 'from-purple-400 to-pink-600' }, { v: '10+', l: 'Projects', c: 'from-blue-400 to-cyan-600' }].map((s, i) => (
               <div key={i} className="group relative py-8">
                 <div className={`absolute inset-0 bg-gradient-to-r ${s.c} opacity-0 group-hover:opacity-5 blur-2xl transition-all duration-500`} />
-                <div className={`text-6xl md:text-7xl font-black bg-gradient-to-r ${s.c} bg-clip-text text-transparent tracking-tighter`}>{s.v}</div>
+                <div className={`text-5xl md:text-7xl font-black bg-gradient-to-r ${s.c} bg-clip-text text-transparent tracking-tighter`}>{s.v}</div>
                 <div className="text-xs font-mono uppercase tracking-[0.5em] text-neutral-500 mt-4">{s.l}</div>
               </div>
             ))}
@@ -155,7 +155,7 @@ export default function Home() {
             <div className="inline-block px-4 py-1 border border-cyan-500/30 bg-cyan-500/5 text-cyan-500 text-[10px] font-mono tracking-[0.3em] uppercase mb-8">
               User.profile // Extraction
             </div>
-            <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-black mb-8 leading-tight">
               Driven <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">Lead Developer</span><br />
               <span className="text-neutral-500 font-medium">specializing in</span>{' '}
               <span className="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">AI Architectures</span>
@@ -207,7 +207,7 @@ export default function Home() {
             <div className="inline-block px-4 py-2 border border-cyan-500/50 rounded-full text-sm text-cyan-400 mb-4 font-mono">
               &lt; DATA.REPOS /&gt;
             </div>
-            <h2 className="text-4xl md:text-5xl font-black mb-4 uppercase tracking-tighter">
+            <h2 className="text-3xl md:text-5xl font-black mb-4 uppercase tracking-tighter">
               Featured <span className="text-cyan-400">Deployments</span>
             </h2>
             <p className="text-neutral-500 max-w-2xl mx-auto font-mono text-sm uppercase">
@@ -261,7 +261,7 @@ export default function Home() {
               <div className="inline-block px-4 py-1 border border-purple-500/30 bg-purple-500/5 text-purple-500 text-[10px] font-mono tracking-[0.3em] uppercase mb-4">
                 Timeline // Professional
               </div>
-              <h2 className="text-4xl md:text-5xl font-black mb-6 uppercase tracking-tighter">Experience</h2>
+              <h2 className="text-3xl md:text-5xl font-black mb-6 uppercase tracking-tighter">Experience</h2>
               <p className="text-neutral-500 font-mono text-sm leading-relaxed">System logs for past professional engagements and development leadership.</p>
             </div>
 
@@ -293,7 +293,7 @@ export default function Home() {
             <div className="inline-block px-4 py-1 border border-cyan-500/30 bg-cyan-500/5 text-cyan-500 text-[10px] font-mono tracking-[0.2em] uppercase">
               Tech Stack // Capabilities
             </div>
-            <h2 className="text-4xl md:text-6xl font-black tracking-tighter">Core <span className="text-cyan-400">Systems</span></h2>
+            <h2 className="text-3xl md:text-6xl font-black tracking-tighter">Core <span className="text-cyan-400">Systems</span></h2>
             <p className="text-neutral-500 font-mono text-sm max-w-xl mx-auto uppercase">Hardcoded skills and modular technology competencies.</p>
           </div>
 
@@ -407,7 +407,7 @@ export default function Home() {
             <div className="inline-block px-4 py-1 border border-cyan-500/30 bg-cyan-500/5 text-cyan-500 text-[10px] font-mono tracking-[0.2em] uppercase">
               Authenticated // Credentials
             </div>
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight uppercase">Professional <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">Credentials</span></h2>
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight uppercase">Professional <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">Credentials</span></h2>
             <p className="text-neutral-500 font-mono text-sm uppercase tracking-widest">Verified industry certifications and training records.</p>
           </div>
 
@@ -459,7 +459,7 @@ export default function Home() {
             <div className="inline-block px-4 py-1 border border-cyan-500/30 bg-cyan-500/5 text-cyan-500 text-[10px] font-mono tracking-[0.3em] uppercase">
               Communication // Uplink
             </div>
-            <h2 className="text-4xl md:text-6xl font-black tracking-tighter">Initialize <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">Connect</span></h2>
+            <h2 className="text-3xl md:text-6xl font-black tracking-tighter">Initialize <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">Connect</span></h2>
             <p className="text-neutral-500 font-mono text-sm uppercase tracking-widest max-w-xl mx-auto">Ready for secure data transfer and collaboration protocols.</p>
           </div>
 
