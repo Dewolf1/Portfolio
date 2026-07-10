@@ -23,7 +23,7 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-black text-white selection:bg-cyan-500/30 font-sans scanlines">
+    <main id="home" className="min-h-screen bg-black text-white selection:bg-cyan-500/30 font-sans scanlines">
       {/* Background Grid */}
       <div className="fixed inset-0 z-0 bg-grid-white/[0.02] pointer-events-none" />
 
@@ -81,7 +81,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+      <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
         <Spotlight className="-top-40 left-0 md:left-60 md:-top-20 opacity-40" fill="white" />
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -111,7 +111,7 @@ export default function Home() {
                 <a href="#projects" className="px-8 py-4 bg-cyan-500 text-black font-bold uppercase tracking-widest hover:bg-cyan-400 cyber-clip transition-all flex items-center gap-2">
                   View Data <ExternalLink size={16} />
                 </a>
-                <a href="/resume_python.pdf" download="Mohd_Adeeb_Resume.pdf" className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-bold uppercase tracking-widest hover:bg-cyan-500/10 cyber-clip transition-all">
+                <a href="/resume_python.pdf" download="MohdAdeeb.pdf" className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-bold uppercase tracking-widest hover:bg-cyan-500/10 cyber-clip transition-all">
                   Access CV
                 </a>
               </div>
