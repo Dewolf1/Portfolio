@@ -41,6 +41,7 @@ export default function Home() {
               <a href="#home" className="hover:text-cyan-400 transition-colors uppercase tracking-widest">Home</a>
               <a href="#about" className="hover:text-cyan-400 transition-colors uppercase tracking-widest">About</a>
               <a href="#projects" className="hover:text-cyan-400 transition-colors uppercase tracking-widest">Projects</a>
+              <a href="#freelance" className="hover:text-cyan-400 transition-colors uppercase tracking-widest">Freelance</a>
               <a href="#experience" className="hover:text-cyan-400 transition-colors uppercase tracking-widest">Experience</a>
               <a href="#skills" className="hover:text-cyan-400 transition-colors uppercase tracking-widest">Skills</a>
               <a href="#contact" className="hover:text-cyan-400 transition-colors uppercase tracking-widest">Contact</a>
@@ -70,6 +71,7 @@ export default function Home() {
               <a href="#home" onClick={() => setMobileMenuOpen(false)} className="py-2 hover:text-cyan-400 transition-colors">HOME</a>
               <a href="#about" onClick={() => setMobileMenuOpen(false)} className="py-2 hover:text-cyan-400 transition-colors">ABOUT</a>
               <a href="#projects" onClick={() => setMobileMenuOpen(false)} className="py-2 hover:text-cyan-400 transition-colors">PROJECTS</a>
+              <a href="#freelance" onClick={() => setMobileMenuOpen(false)} className="py-2 hover:text-cyan-400 transition-colors">FREELANCE</a>
               <a href="#experience" onClick={() => setMobileMenuOpen(false)} className="py-2 hover:text-cyan-400 transition-colors">EXPERIENCE</a>
               <a href="#skills" onClick={() => setMobileMenuOpen(false)} className="py-2 hover:text-cyan-400 transition-colors">SKILLS</a>
               <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="py-2 hover:text-cyan-400 transition-colors">CONTACT</a>
@@ -249,6 +251,144 @@ export default function Home() {
             <a href="https://github.com/Dewolf1?tab=repositories" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-8 py-4 border border-neutral-800 hover:border-cyan-500/50 hover:bg-cyan-500/5 text-neutral-400 hover:text-cyan-400 transition-all font-mono text-xs uppercase tracking-[0.3em] cyber-clip">
               View All Repositories <Github size={16} />
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Freelance Works */}
+      <section id="freelance" className="py-20 relative">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <div className="inline-block px-4 py-2 border border-amber-500/50 rounded-full text-sm text-amber-400 mb-4 font-mono">
+              &lt; CLIENT.BUILDS /&gt;
+            </div>
+            <h2 className="text-3xl md:text-5xl font-black mb-4 uppercase tracking-tighter">
+              Freelance <span className="text-amber-400">Works</span>
+            </h2>
+            <p className="text-neutral-500 max-w-2xl mx-auto font-mono text-sm uppercase">
+              Real-world client projects — from concept to production-ready deployments.
+            </p>
+          </div>
+
+          {/* Category Badges */}
+          <div className="flex flex-wrap justify-center gap-3 mb-12">
+            {['WordPress E-commerce', 'Node.js Apps', 'Firebase Backend', 'Payment Gateways', 'Logistics Integration'].map((tag, i) => (
+              <span key={i} className="px-3 py-1 bg-amber-500/10 border border-amber-500/30 text-amber-400/80 text-[10px] font-mono uppercase tracking-widest">{tag}</span>
+            ))}
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                title: 'Raja Masale & Dry Fruits',
+                url: 'rajamasaleanddryfruits.com',
+                href: 'https://rajamasaleanddryfruits.com',
+                desc: 'WordPress WooCommerce store selling premium dry fruits and masalas across India.',
+                tech: ['WordPress', 'WooCommerce', 'PhonePe', 'Google Auth'],
+                gradient: 'from-red-500 to-orange-500',
+                icon: '🌶️',
+                logo: '/raja-logo.jpg',
+                type: 'WordPress E-commerce',
+                features: ['PhonePe Payment Gateway', 'Google Authentication', 'Pan India Shipping'],
+              },
+              {
+                title: 'Glass India Company',
+                url: 'glassindiacompany.com',
+                href: 'https://glassindiacompany.com',
+                desc: 'Premium glass and mirror products e-commerce site with product showcase and enquiry system.',
+                tech: ['WordPress', 'WooCommerce', 'Custom Theme'],
+                gradient: 'from-slate-400 to-blue-400',
+                icon: '🪟',
+                logo: '/glassindia.png',
+                type: 'WordPress E-commerce',
+                features: ['Premium Product Showcase', 'Enquiry System', 'Help Center'],
+              },
+              {
+                title: 'Herlyy',
+                url: 'herlyy.com',
+                href: '#',
+                desc: "Female companion app featuring an AI chatbot, period tracking, expert doctors, and community support. Coming soon to App Store and Play Store.",
+                tech: ['Node.js', 'Static Site', 'Responsive Design'],
+                gradient: 'from-pink-500 to-rose-400',
+                icon: '💕',
+                logo: '/herlyy.png',
+                type: 'Node.js App',
+                features: ['AI Chatbot Companion', 'Period Tracker', 'Coming Soon to App Stores'],
+              },
+              {
+                title: 'VisaOVisa',
+                url: 'visaovisa.com',
+                href: 'https://visaovisa.com',
+                desc: 'Genuine visa stamping, attestation & Gulf job recruitment platform by Mohd Faisal Siddique.',
+                tech: ['Node.js', 'Static Site', 'WhatsApp Integration'],
+                gradient: 'from-blue-500 to-indigo-500',
+                icon: '✈️',
+                logo: '/visa.png',
+                type: 'Node.js App',
+                features: ['34K+ Clients', 'Job Application System', 'WhatsApp Lead Gen'],
+              },
+              {
+                title: 'Zaanji Pret',
+                url: 'zaanji.com',
+                href: 'https://zaanji.com',
+                desc: 'Full-stack premium Pakistani suits e-commerce with Firebase backend, Shiprocket logistics & FastCheckout.',
+                tech: ['Node.js', 'Firebase', 'Shiprocket', 'FastCheckout'],
+                gradient: 'from-amber-400 to-yellow-500',
+                icon: '👗',
+                logo: '/zaanji.png',
+                type: 'Node.js + Firebase',
+                features: ['Shiprocket Logistics', 'Fast Checkout', 'COD + UPI + Cards'],
+              },
+            ].map((p, i) => (
+              <a key={i} href={p.href} target="_blank" rel="noopener noreferrer" className="block group">
+                <div className="relative h-full border border-neutral-800 hover:border-amber-500/50 bg-neutral-950/60 hover:bg-neutral-900/60 transition-all duration-300 hover:scale-[1.03] overflow-hidden">
+                  {/* Top accent bar */}
+                  <div className={`h-1 bg-gradient-to-r ${p.gradient}`} />
+                  {/* Type badge */}
+                  <div className="absolute top-4 right-4">
+                    <span className="px-2 py-0.5 bg-neutral-900 border border-neutral-700 text-[8px] font-mono uppercase tracking-widest text-neutral-500">{p.type}</span>
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-start gap-4 mb-4">
+                      {p.logo ? (
+                        <div className={`w-14 h-14 bg-white rounded-sm shrink-0 overflow-hidden border border-neutral-700 flex items-center justify-center p-1`}>
+                          <img src={p.logo} alt={`${p.title} logo`} className="w-full h-full object-contain" />
+                        </div>
+                      ) : (
+                        <div className={`text-3xl p-2 bg-gradient-to-br ${p.gradient} bg-opacity-10 rounded-sm shrink-0`}>{p.icon}</div>
+                      )}
+                      <div>
+                        <h3 className="text-xl font-black tracking-tight group-hover:text-amber-400 transition-colors uppercase leading-tight">{p.title}</h3>
+                        <p className="text-amber-500/60 text-[10px] font-mono mt-0.5">{p.url}</p>
+                      </div>
+                    </div>
+                    <p className="text-neutral-500 text-sm mb-4 font-light leading-relaxed">{p.desc}</p>
+                    {/* Features list */}
+                    <div className="space-y-1 mb-4">
+                      {p.features.map((f, j) => (
+                        <div key={j} className="flex items-center gap-2 text-neutral-400 text-[10px] font-mono">
+                          <span className="w-1 h-1 bg-amber-500 shrink-0" />
+                          {f}
+                        </div>
+                      ))}
+                    </div>
+                    {/* Tech tags */}
+                    <div className="flex flex-wrap gap-2 pt-3 border-t border-neutral-800/60">
+                      {p.tech.map((t, j) => (
+                        <span key={j} className="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded-sm text-[10px] font-mono text-amber-400/70 uppercase tracking-widest">{t}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          <div className="mt-16 text-center">
+            <p className="text-neutral-600 text-[10px] font-mono uppercase tracking-[0.4em] flex items-center justify-center gap-3">
+              <Briefcase size={14} className="text-amber-500" />
+              5 Clients Served // Production Grade Deployments
+            </p>
           </div>
         </div>
       </section>
