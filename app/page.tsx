@@ -345,37 +345,43 @@ export default function Home() {
                   {/* Top accent bar */}
                   <div className={`h-1 bg-gradient-to-r ${p.gradient}`} />
                   {/* Type badge */}
-                  <div className="absolute top-4 right-4">
-                    <span className="px-2 py-0.5 bg-neutral-900 border border-neutral-700 text-[8px] font-mono uppercase tracking-widest text-neutral-500">{p.type}</span>
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-start gap-4 mb-4">
+                  <div className="p-5 sm:p-6 flex flex-col h-full">
+                    {/* Header: Logo and Badge */}
+                    <div className="flex justify-between items-start mb-4 gap-2">
                       {p.logo ? (
-                        <div className={`w-14 h-14 bg-white rounded-sm shrink-0 overflow-hidden border border-neutral-700 flex items-center justify-center p-1`}>
+                        <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-sm shrink-0 overflow-hidden border border-neutral-700 flex items-center justify-center p-1">
                           <img src={p.logo} alt={`${p.title} logo`} className="w-full h-full object-contain" />
                         </div>
                       ) : (
-                        <div className={`text-3xl p-2 bg-gradient-to-br ${p.gradient} bg-opacity-10 rounded-sm shrink-0`}>{p.icon}</div>
+                        <div className={`text-2xl sm:text-3xl p-2 bg-gradient-to-br ${p.gradient} bg-opacity-10 rounded-sm shrink-0`}>{p.icon}</div>
                       )}
-                      <div>
-                        <h3 className="text-xl font-black tracking-tight group-hover:text-amber-400 transition-colors uppercase leading-tight">{p.title}</h3>
-                        <p className="text-amber-500/60 text-[10px] font-mono mt-0.5">{p.url}</p>
-                      </div>
+                      <span className="px-2 py-1 bg-neutral-900 border border-neutral-700 text-[8px] font-mono uppercase tracking-widest text-neutral-500 text-right shrink-0">
+                        {p.type}
+                      </span>
                     </div>
-                    <p className="text-neutral-500 text-sm mb-4 font-light leading-relaxed">{p.desc}</p>
+
+                    {/* Title & URL */}
+                    <div className="mb-3">
+                      <h3 className="text-lg sm:text-xl font-black tracking-tight group-hover:text-amber-400 transition-colors uppercase leading-tight">{p.title}</h3>
+                      <p className="text-amber-500/60 text-[10px] font-mono mt-1 break-all">{p.url}</p>
+                    </div>
+
+                    <p className="text-neutral-500 text-xs sm:text-sm mb-4 font-light leading-relaxed flex-grow">{p.desc}</p>
+                    
                     {/* Features list */}
-                    <div className="space-y-1 mb-4">
+                    <div className="space-y-1.5 mb-5">
                       {p.features.map((f, j) => (
-                        <div key={j} className="flex items-center gap-2 text-neutral-400 text-[10px] font-mono">
-                          <span className="w-1 h-1 bg-amber-500 shrink-0" />
-                          {f}
+                        <div key={j} className="flex items-start gap-2 text-neutral-400 text-[10px] sm:text-xs font-mono">
+                          <span className="w-1.5 h-1.5 bg-amber-500 shrink-0 mt-1" />
+                          <span className="leading-tight">{f}</span>
                         </div>
                       ))}
                     </div>
+                    
                     {/* Tech tags */}
-                    <div className="flex flex-wrap gap-2 pt-3 border-t border-neutral-800/60">
+                    <div className="flex flex-wrap gap-1.5 pt-4 border-t border-neutral-800/60 mt-auto">
                       {p.tech.map((t, j) => (
-                        <span key={j} className="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded-sm text-[10px] font-mono text-amber-400/70 uppercase tracking-widest">{t}</span>
+                        <span key={j} className="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded-sm text-[8px] sm:text-[10px] font-mono text-amber-400/70 uppercase tracking-widest">{t}</span>
                       ))}
                     </div>
                   </div>
