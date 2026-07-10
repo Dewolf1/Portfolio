@@ -31,12 +31,12 @@ export default function Home() {
       <nav className="fixed top-0 z-50 w-full border-b border-neutral-800 bg-black/80 backdrop-blur-md">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
+            <a href="#home" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center glow-shadow-cyan">
                 <span className="text-sm font-bold">MA</span>
               </div>
               <span className="text-xl font-bold tracking-tighter">MOHD <span className="text-cyan-400">ADEEB</span></span>
-            </div>
+            </a>
             <div className="hidden md:flex gap-8 font-mono text-sm">
               <a href="#home" className="hover:text-cyan-400 transition-colors uppercase tracking-widest">Home</a>
               <a href="#about" className="hover:text-cyan-400 transition-colors uppercase tracking-widest">About</a>
@@ -398,6 +398,68 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Client Reviews */}
+      <section className="py-24 border-y border-neutral-800/50 bg-neutral-900/10 relative">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <div className="inline-block px-4 py-2 border border-purple-500/50 rounded-full text-sm text-purple-400 mb-4 font-mono">
+              &lt; CLIENT.FEEDBACK /&gt;
+            </div>
+            <h2 className="text-3xl md:text-5xl font-black mb-4 uppercase tracking-tighter">
+              What Clients <span className="text-purple-400">Say</span>
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+            {[
+              {
+                client: "Raja Masale & Dry Fruits",
+                review: "Adeeb bhai ne humari website bahot shandaar banayi hai. Payment aur shipping dono ekdum smoothly kaam kar rahe hain. Dry fruits ka order ab asaani se manage ho jata hai.",
+                color: "text-orange-400"
+              },
+              {
+                client: "Glass India Company",
+                review: "Excellent work on our e-commerce site. The glass product showcase looks incredibly premium, and the new enquiry system has doubled our daily leads. Highly recommended.",
+                color: "text-blue-400"
+              },
+              {
+                client: "VisaOVisa",
+                review: "Very professional and fast execution. Adeeb understood exactly what we needed for our visa stamping platform. The WhatsApp integration works flawlessly.",
+                color: "text-indigo-400"
+              },
+              {
+                client: "Herlyy",
+                review: "The landing page Adeeb built perfectly captures the soothing and supportive vibe we wanted for our women's wellness app. Beautifully responsive on all devices.",
+                color: "text-pink-400"
+              },
+              {
+                client: "Zaanji Pret",
+                review: "Outstanding full-stack development. The Firebase integration is fast, and connecting Shiprocket for our Pakistani suits logistics has completely streamlined our deliveries.",
+                color: "text-yellow-400"
+              }
+            ].map((r, i) => (
+              <Card key={i} variant="cyber" className="p-8 group hover:scale-[1.02] transition-all">
+                <div className="mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-amber-500 text-lg">★</span>
+                  ))}
+                </div>
+                <p className="text-neutral-400 text-sm mb-6 leading-relaxed italic border-l-2 border-neutral-800 pl-4">
+                  "{r.review}"
+                </p>
+                <div className="mt-auto">
+                  <p className={`font-black uppercase tracking-widest text-xs ${r.color}`}>
+                    {r.client}
+                  </p>
+                  <p className="text-neutral-600 text-[10px] font-mono mt-1">Verified Client</p>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       {/* Experience */}
       <section id="experience" className="py-32 relative overflow-hidden">
