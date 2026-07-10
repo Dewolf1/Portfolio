@@ -403,7 +403,7 @@ export default function Home() {
       <section id="experience" className="py-32 relative overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row items-start gap-12">
-            <div className="md:w-1/3 sticky top-32">
+            <div className="w-full md:w-1/3 md:sticky top-32">
               <div className="inline-block px-4 py-1 border border-purple-500/30 bg-purple-500/5 text-purple-500 text-[10px] font-mono tracking-[0.3em] uppercase mb-4">
                 Timeline // Professional
               </div>
