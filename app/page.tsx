@@ -175,7 +175,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="font-bold text-xl tracking-tight">ADGIPS</h3>
-                  <p className="text-cyan-500/80 text-sm font-mono mt-1">B.Tech // IOT // Computer Science</p>
+                  <p className="text-cyan-500/80 text-sm font-mono mt-1">B.Tech // Computer Science and Technology</p>
                   <p className="text-neutral-500 text-xs uppercase tracking-widest mt-2 font-mono">2023 – PRESENT</p>
                   <div className="h-1 w-full bg-neutral-800 mt-4 overflow-hidden">
                     <div className="h-full bg-cyan-500 w-[82.3%] animate-pulse" />
@@ -193,7 +193,7 @@ export default function Home() {
                   <p className="text-purple-500/80 text-sm font-mono mt-1">Class 12 // CBSE Board</p>
                   <p className="text-neutral-500 text-xs uppercase tracking-widest mt-2 font-mono">2021 – 2022</p>
                   <div className="h-1 w-full bg-neutral-800 mt-4 overflow-hidden">
-                    <div className="h-full bg-purple-500 w-[80%]" />
+                    <div className="h-full bg-purple-500 w-full" />
                   </div>
                 </div>
               </div>
