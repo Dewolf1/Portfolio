@@ -3,7 +3,7 @@
 import { SplineScene } from "@/components/ui/splite"
 import { Spotlight } from "@/components/ui/spotlight"
 import { Card } from "@/components/ui/card"
-import { Mail, Phone, Linkedin, Github, ExternalLink, Award, Briefcase, GraduationCap, Terminal, Code, Menu, X } from "lucide-react"
+import { Mail, Phone, Linkedin, Github, ExternalLink, Award, Briefcase, GraduationCap, Terminal, Code, Menu, X, Instagram, Globe } from "lucide-react"
 import { useState } from "react"
 
 export default function Home() {
@@ -41,6 +41,7 @@ export default function Home() {
               <a href="#home" className="hover:text-cyan-400 transition-colors uppercase tracking-widest">Home</a>
               <a href="#about" className="hover:text-cyan-400 transition-colors uppercase tracking-widest">About</a>
               <a href="#projects" className="hover:text-cyan-400 transition-colors uppercase tracking-widest">Projects</a>
+              <a href="#startups" className="hover:text-cyan-400 transition-colors uppercase tracking-widest">Startups</a>
               <a href="#freelance" className="hover:text-cyan-400 transition-colors uppercase tracking-widest">Freelance</a>
               <a href="#experience" className="hover:text-cyan-400 transition-colors uppercase tracking-widest">Experience</a>
               <a href="#skills" className="hover:text-cyan-400 transition-colors uppercase tracking-widest">Skills</a>
@@ -71,6 +72,7 @@ export default function Home() {
               <a href="#home" onClick={() => setMobileMenuOpen(false)} className="py-2 hover:text-cyan-400 transition-colors">HOME</a>
               <a href="#about" onClick={() => setMobileMenuOpen(false)} className="py-2 hover:text-cyan-400 transition-colors">ABOUT</a>
               <a href="#projects" onClick={() => setMobileMenuOpen(false)} className="py-2 hover:text-cyan-400 transition-colors">PROJECTS</a>
+              <a href="#startups" onClick={() => setMobileMenuOpen(false)} className="py-2 hover:text-cyan-400 transition-colors">STARTUPS</a>
               <a href="#freelance" onClick={() => setMobileMenuOpen(false)} className="py-2 hover:text-cyan-400 transition-colors">FREELANCE</a>
               <a href="#experience" onClick={() => setMobileMenuOpen(false)} className="py-2 hover:text-cyan-400 transition-colors">EXPERIENCE</a>
               <a href="#skills" onClick={() => setMobileMenuOpen(false)} className="py-2 hover:text-cyan-400 transition-colors">SKILLS</a>
@@ -139,7 +141,7 @@ export default function Home() {
       <section className="py-24 border-y border-neutral-800/50 bg-neutral-900/10 relative">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-            {[{ v: '8.23', l: 'GPA', c: 'from-cyan-400 to-blue-600' }, { v: '4+', l: 'Certifications', c: 'from-purple-400 to-pink-600' }, { v: '10+', l: 'Projects', c: 'from-blue-400 to-cyan-600' }].map((s, i) => (
+            {[{ v: '8.23', l: 'GPA', c: 'from-cyan-400 to-blue-600' }, { v: '6+', l: 'Certifications', c: 'from-purple-400 to-pink-600' }, { v: '15+', l: 'Projects', c: 'from-blue-400 to-cyan-600' }].map((s, i) => (
               <div key={i} className="group relative py-8">
                 <div className={`absolute inset-0 bg-gradient-to-r ${s.c} opacity-0 group-hover:opacity-5 blur-2xl transition-all duration-500`} />
                 <div className={`text-5xl md:text-7xl font-black bg-gradient-to-r ${s.c} bg-clip-text text-transparent tracking-tighter`}>{s.v}</div>
@@ -173,9 +175,14 @@ export default function Home() {
                 <div className="p-4 bg-cyan-500/10 border border-cyan-500/20 rounded-sm group-hover:scale-110 transition-transform">
                   <GraduationCap className="text-cyan-400" size={28} />
                 </div>
-                <div>
-                  <h3 className="font-bold text-xl tracking-tight">ADGIPS</h3>
-                  <p className="text-cyan-500/80 text-sm font-mono mt-1">B.Tech // Computer Science and Technology</p>
+                <div className="flex-1">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-0">
+                    <h3 className="font-bold text-xl tracking-tight">ADGIPS</h3>
+                    <span className="inline-block px-2 py-1 bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-bold font-mono text-xs uppercase tracking-widest">
+                      8.23 CGPA
+                    </span>
+                  </div>
+                  <p className="text-cyan-500/80 text-sm font-mono mt-2">B.Tech // Computer Science and Technology</p>
                   <p className="text-neutral-500 text-xs uppercase tracking-widest mt-2 font-mono">2023 – PRESENT</p>
                   <div className="h-1 w-full bg-neutral-800 mt-4 overflow-hidden">
                     <div className="h-full bg-cyan-500 w-[82.3%] animate-pulse" />
@@ -188,12 +195,22 @@ export default function Home() {
                 <div className="p-4 bg-purple-500/10 border border-purple-500/20 rounded-sm group-hover:scale-110 transition-transform">
                   <GraduationCap className="text-purple-400" size={28} />
                 </div>
-                <div>
-                  <h3 className="font-bold text-xl tracking-tight">GFPS High School</h3>
-                  <p className="text-purple-500/80 text-sm font-mono mt-1">Class 12 // CBSE Board</p>
-                  <p className="text-neutral-500 text-xs uppercase tracking-widest mt-2 font-mono">2021 – 2022</p>
+                <div className="flex-1">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-0">
+                    <h3 className="font-bold text-xl tracking-tight">GFPS High School</h3>
+                    <div className="flex gap-2">
+                      <span className="inline-block px-2 py-1 bg-purple-500/10 border border-purple-500/30 text-purple-400 font-bold font-mono text-xs uppercase tracking-widest">
+                        10th: 91%
+                      </span>
+                      <span className="inline-block px-2 py-1 bg-purple-500/10 border border-purple-500/30 text-purple-400 font-bold font-mono text-xs uppercase tracking-widest">
+                        12th: 86%
+                      </span>
+                    </div>
+                  </div>
+                  <p className="text-purple-500/80 text-sm font-mono mt-2">CBSE Board</p>
+                  <p className="text-neutral-500 text-xs uppercase tracking-widest mt-2 font-mono">2020 – 2022</p>
                   <div className="h-1 w-full bg-neutral-800 mt-4 overflow-hidden">
-                    <div className="h-full bg-purple-500 w-full" />
+                    <div className="h-full bg-purple-500 w-[91%]" />
                   </div>
                 </div>
               </div>
@@ -255,6 +272,118 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Startups */}
+      <section id="startups" className="py-20 relative bg-neutral-900/20 border-y border-neutral-800/50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <div className="inline-block px-4 py-2 border border-purple-500/50 rounded-full text-sm text-purple-400 mb-4 font-mono">
+              &lt; STARTUPS.VENTURES /&gt;
+            </div>
+            <h2 className="text-3xl md:text-5xl font-black mb-4 uppercase tracking-tighter">
+              Startups I'm <span className="text-purple-400">Building</span>
+            </h2>
+            <p className="text-neutral-500 max-w-2xl mx-auto font-mono text-sm uppercase">
+              Ventures where I act as a Founder or Co-Founder.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Jenwin */}
+            <a href="https://jenw.in/" target="_blank" rel="noopener noreferrer" className="block group">
+              <div className="relative h-full border border-neutral-800 hover:border-purple-500/50 bg-neutral-950/80 hover:bg-neutral-900/80 transition-all duration-300 hover:scale-[1.02] overflow-hidden p-8">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-indigo-500" />
+                <div className="flex justify-between items-start mb-6">
+                  <div className="w-24 h-8 bg-white/5 rounded-sm p-2 flex items-center justify-center">
+                    <img src="/jenwin.png" alt="Jenwin Logo" className="max-w-full max-h-full object-contain filter brightness-200" />
+                  </div>
+                  <span className="px-3 py-1 bg-purple-500/20 border border-purple-500/40 text-[10px] font-mono uppercase tracking-widest text-purple-400 shrink-0">
+                    Founder
+                  </span>
+                </div>
+                <h3 className="text-2xl font-black tracking-tight mb-2 uppercase text-white group-hover:text-purple-400 transition-colors">Jenwin</h3>
+                <p className="text-neutral-400 text-sm mb-6 leading-relaxed">
+                  Engineering, design, and product thinking. Full-service product studio for Indian founders. We build SaaS, Web Apps, and custom software.
+                </p>
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="flex flex-col">
+                    <span className="text-purple-400 font-black text-xl">10+</span>
+                    <span className="text-neutral-600 text-[10px] font-mono uppercase">Projects</span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-purple-400 font-black text-xl">&lt; 7</span>
+                    <span className="text-neutral-600 text-[10px] font-mono uppercase">Days MVP</span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-purple-400 font-black text-xl">100%</span>
+                    <span className="text-neutral-600 text-[10px] font-mono uppercase">On-Time</span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-purple-400 font-black text-xl">24/7</span>
+                    <span className="text-neutral-600 text-[10px] font-mono uppercase">Available</span>
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-2 pt-4 border-t border-neutral-800/60 mt-auto">
+                  {['Next.js', 'React', 'TypeScript', 'Supabase', 'AI/LLM'].map((t, j) => (
+                    <span key={j} className="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded-sm text-[10px] font-mono text-purple-400/70 uppercase tracking-widest">{t}</span>
+                  ))}
+                </div>
+                <div className="flex gap-4 pt-4 mt-4 border-t border-neutral-800/60">
+                  <span className="flex items-center gap-1.5 text-neutral-400 hover:text-purple-400 transition-colors text-[10px] font-mono uppercase tracking-widest">
+                    <Globe size={12} /> jenw.in
+                  </span>
+                </div>
+              </div>
+            </a>
+
+            {/* Herlyy */}
+            <a href="https://www.herlyy.com/" target="_blank" rel="noopener noreferrer" className="block group">
+              <div className="relative h-full border border-neutral-800 hover:border-pink-500/50 bg-neutral-950/80 hover:bg-neutral-900/80 transition-all duration-300 hover:scale-[1.02] overflow-hidden p-8">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500 to-rose-400" />
+                <div className="flex justify-between items-start mb-6">
+                  <div className="w-12 h-12 bg-white rounded-sm shrink-0 overflow-hidden border border-neutral-700 flex items-center justify-center p-1">
+                    <img src="/herlyy.png" alt="Herlyy Logo" className="w-full h-full object-contain" />
+                  </div>
+                  <span className="px-3 py-1 bg-pink-500/20 border border-pink-500/40 text-[10px] font-mono uppercase tracking-widest text-pink-400 shrink-0">
+                    Co-Founder
+                  </span>
+                </div>
+                <h3 className="text-2xl font-black tracking-tight mb-2 uppercase text-white group-hover:text-pink-400 transition-colors">Herlyy</h3>
+                <p className="text-neutral-400 text-sm mb-6 leading-relaxed">
+                  Female companion app featuring an AI chatbot, period tracking, expert doctors, and community support.
+                </p>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-start gap-2 text-neutral-400 text-xs font-mono">
+                    <span className="w-1.5 h-1.5 bg-pink-500 shrink-0 mt-1" />
+                    <span>AI Chatbot Companion</span>
+                  </div>
+                  <div className="flex items-start gap-2 text-neutral-400 text-xs font-mono">
+                    <span className="w-1.5 h-1.5 bg-pink-500 shrink-0 mt-1" />
+                    <span>Period Tracker & Doctors</span>
+                  </div>
+                  <div className="flex items-start gap-2 text-neutral-400 text-xs font-mono">
+                    <span className="w-1.5 h-1.5 bg-pink-500 shrink-0 mt-1" />
+                    <span>Live Web / Coming Soon to App Stores</span>
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-2 pt-4 border-t border-neutral-800/60 mt-auto">
+                  {['Node.js', 'PWA', 'Responsive Design', 'AI Chatbot'].map((t, j) => (
+                    <span key={j} className="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded-sm text-[10px] font-mono text-pink-400/70 uppercase tracking-widest">{t}</span>
+                  ))}
+                </div>
+                <div className="flex gap-4 pt-4 mt-4 border-t border-neutral-800/60">
+                  <span className="flex items-center gap-1.5 text-neutral-400 hover:text-pink-400 transition-colors text-[10px] font-mono uppercase tracking-widest">
+                    <Globe size={12} /> Website
+                  </span>
+                  <a href="https://herlyy-pwa.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-neutral-400 hover:text-pink-400 transition-colors text-[10px] font-mono uppercase tracking-widest z-10" onClick={(e) => { e.preventDefault(); window.open("https://herlyy-pwa.vercel.app/", "_blank"); }}>
+                    <ExternalLink size={12} /> App Demo
+                  </a>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Freelance Works */}
       <section id="freelance" className="py-20 relative">
         <div className="container mx-auto px-6">
@@ -290,6 +419,7 @@ export default function Home() {
                 logo: '/raja-logo.jpg',
                 type: 'WordPress E-commerce',
                 features: ['PhonePe Payment Gateway', 'Google Authentication', 'Pan India Shipping'],
+                instagram: '',
               },
               {
                 title: 'Glass India Company',
@@ -302,18 +432,46 @@ export default function Home() {
                 logo: '/glassindia.png',
                 type: 'WordPress E-commerce',
                 features: ['Premium Product Showcase', 'Enquiry System', 'Help Center'],
+                instagram: '',
               },
               {
                 title: 'Herlyy',
                 url: 'herlyy.com',
-                href: '#',
-                desc: "Female companion app featuring an AI chatbot, period tracking, expert doctors, and community support. Coming soon to App Store and Play Store.",
+                href: 'https://www.herlyy.com/',
+                desc: "Co-Founder. Female companion app featuring an AI chatbot, period tracking, expert doctors, and community support.",
                 tech: ['Node.js', 'Static Site', 'Responsive Design'],
                 gradient: 'from-pink-500 to-rose-400',
                 icon: '💕',
                 logo: '/herlyy.png',
                 type: 'Node.js App',
-                features: ['AI Chatbot Companion', 'Period Tracker', 'Coming Soon to App Stores'],
+                features: ['AI Chatbot Companion', 'Period Tracker', 'Live Web/App Stores'],
+                instagram: '',
+              },
+              {
+                title: 'Talbiya Collection',
+                url: 'talbiyacollection.com',
+                href: 'https://talbiyacollection.com/',
+                desc: 'Premium Pakistani and ethnic suits collection.',
+                tech: ['E-commerce', 'Payment Gateway'],
+                gradient: 'from-fuchsia-500 to-pink-500',
+                icon: '👗',
+                logo: '/talbiya.png',
+                type: 'E-commerce',
+                features: ['Premium Collection', 'Pan India Shipping', 'Online Payments'],
+                instagram: 'https://www.instagram.com/talbiya__collection0.1/',
+              },
+              {
+                title: 'US BRO',
+                url: 'usbro.in',
+                href: 'https://usbro.in/',
+                desc: 'WordPress site selling premium t-shirts across India.',
+                tech: ['WordPress', 'WooCommerce'],
+                gradient: 'from-gray-500 to-slate-400',
+                icon: '👕',
+                logo: '/usbro.png',
+                type: 'WordPress E-commerce',
+                features: ['T-shirt Collection', 'Secure Payments', 'Fast Shipping'],
+                instagram: 'https://www.instagram.com/udaysharmaaaaa/?hl=en',
               },
               {
                 title: 'VisaOVisa',
@@ -326,6 +484,7 @@ export default function Home() {
                 logo: '/visa.png',
                 type: 'Node.js App',
                 features: ['34K+ Clients', 'Job Application System', 'WhatsApp Lead Gen'],
+                instagram: '',
               },
               {
                 title: 'Zaanji Pret',
@@ -338,6 +497,33 @@ export default function Home() {
                 logo: '/zaanji.png',
                 type: 'Node.js + Firebase',
                 features: ['Shiprocket Logistics', 'Fast Checkout', 'COD + UPI + Cards'],
+                instagram: 'https://www.instagram.com/halimafashionsuits',
+              },
+              {
+                title: 'Halima Fashion - Shop Manager',
+                url: 'github.com/Dewolf1/Shop-Manager',
+                href: 'https://github.com/Dewolf1/Shop-Manager',
+                desc: 'Professional Electron-based POS & Business Management System built for Halima Fashion, New Seelampur, Delhi. Full offline desktop app.',
+                tech: ['Electron', 'Node.js', 'jsPDF', 'Chart.js', 'SQLite', 'node-cron'],
+                gradient: 'from-emerald-500 to-teal-500',
+                icon: '🖥️',
+                logo: '/zaanji.png',
+                type: 'Desktop App (Electron)',
+                features: ['Full POS Billing + GST', 'Inventory & CRM', 'Dual PDF (A4 + 80mm Thermal)', 'Automated Nightly Backup', 'Role-based Access Control'],
+                instagram: '',
+              },
+              {
+                title: 'Hospimedico',
+                url: 'hospimedico.com',
+                href: 'https://www.hospimedico.com',
+                desc: 'Custom Node.js product showcase for physiotherapeutic & medical equipment. Customers can buy via Amazon or WhatsApp directly from any product page.',
+                tech: ['Node.js', 'Custom UI', 'Amazon Integration', 'WhatsApp API'],
+                gradient: 'from-cyan-500 to-sky-500',
+                icon: '🏥',
+                logo: '/hospimedico.jpeg',
+                type: 'Node.js App',
+                features: ['Premium Product Showcase', 'Amazon Store Integration', 'WhatsApp Direct Buy'],
+                instagram: '',
               },
             ].map((p, i) => (
               <a key={i} href={p.href} target="_blank" rel="noopener noreferrer" className="block group">
@@ -367,7 +553,7 @@ export default function Home() {
                     </div>
 
                     <p className="text-neutral-500 text-xs sm:text-sm mb-4 font-light leading-relaxed flex-grow">{p.desc}</p>
-                    
+
                     {/* Features list */}
                     <div className="space-y-1.5 mb-5">
                       {p.features.map((f, j) => (
@@ -377,12 +563,26 @@ export default function Home() {
                         </div>
                       ))}
                     </div>
-                    
+
                     {/* Tech tags */}
                     <div className="flex flex-wrap gap-1.5 pt-4 border-t border-neutral-800/60 mt-auto">
                       {p.tech.map((t, j) => (
                         <span key={j} className="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded-sm text-[8px] sm:text-[10px] font-mono text-amber-400/70 uppercase tracking-widest">{t}</span>
                       ))}
+                    </div>
+
+                    {/* Links */}
+                    <div className="flex gap-4 pt-4 mt-4 border-t border-neutral-800/60">
+                      {p.href && p.href !== '#' && (
+                        <span className="flex items-center gap-1.5 text-neutral-400 hover:text-amber-400 transition-colors text-[10px] font-mono uppercase tracking-widest">
+                          <Globe size={12} /> Website
+                        </span>
+                      )}
+                      {p.instagram && (
+                        <a href={p.instagram} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-neutral-400 hover:text-amber-400 transition-colors text-[10px] font-mono uppercase tracking-widest z-10" onClick={(e) => { e.preventDefault(); window.open(p.instagram, "_blank"); }}>
+                          <Instagram size={12} /> Instagram
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -393,7 +593,7 @@ export default function Home() {
           <div className="mt-16 text-center">
             <p className="text-neutral-600 text-[10px] font-mono uppercase tracking-[0.4em] flex items-center justify-center gap-3">
               <Briefcase size={14} className="text-amber-500" />
-              5 Clients Served // Production Grade Deployments
+              9 Clients Served // Production Grade Deployments
             </p>
           </div>
         </div>
@@ -435,8 +635,13 @@ export default function Home() {
               },
               {
                 client: "Zaanji Pret",
-                review: "Outstanding full-stack development. The Firebase integration is fast, and connecting Shiprocket for our Pakistani suits logistics has completely streamlined our deliveries.",
+                review: "Outstanding full-stack development. The Firebase integration is fast, and connecting Shiprocket for our suits logistics has completely streamlined our deliveries.",
                 color: "text-yellow-400"
+              },
+              {
+                client: "Talbiya Collection",
+                review: "Adeeb created a stunning e-commerce platform for our ethnic wear. The payment gateway and shipping integration made selling our premium suits across India completely seamless!",
+                color: "text-fuchsia-400"
               }
             ].map((r, i) => (
               <Card key={i} variant="cyber" className="p-8 group hover:scale-[1.02] transition-all">
@@ -515,7 +720,7 @@ export default function Home() {
                 <h3 className="font-black text-sm uppercase tracking-widest text-cyan-400">Languages</h3>
               </div>
               <div className="space-y-3">
-                {['Python', 'JavaScript', 'TypeScript', 'SQL', 'HTML/CSS'].map((skill, i) => (
+                {['Python', 'JavaScript', 'TypeScript', 'SQL', 'HTML/CSS', 'Bash'].map((skill, i) => (
                   <div key={i} className="flex items-center gap-3 text-neutral-400 text-xs font-mono group-hover:translate-x-1 transition-transform">
                     <span className="w-1 h-1 bg-cyan-500" />
                     {skill}
@@ -533,7 +738,7 @@ export default function Home() {
                 <h3 className="font-black text-sm uppercase tracking-widest text-purple-400">AI & ML</h3>
               </div>
               <div className="space-y-3">
-                {['LangChain', 'OpenAI', 'LLaMA', 'Google AI', 'Agentic AI', 'TensorFlow'].map((skill, i) => (
+                {['LangChain', 'OpenAI', 'LLaMA', 'Google AI', 'Agentic AI', 'TensorFlow', 'RAG Pipelines'].map((skill, i) => (
                   <div key={i} className="flex items-center gap-3 text-neutral-400 text-xs font-mono group-hover:translate-x-1 transition-transform">
                     <span className="w-1 h-1 bg-purple-500" />
                     {skill}
@@ -551,7 +756,7 @@ export default function Home() {
                 <h3 className="font-black text-sm uppercase tracking-widest text-blue-400">Frameworks</h3>
               </div>
               <div className="space-y-3">
-                {['Next.js', 'React', 'Flask', 'FastAPI', 'Tailwind CSS', 'Node.js'].map((skill, i) => (
+                {['Next.js', 'React', 'Flask', 'FastAPI', 'Tailwind CSS', 'Node.js', 'Electron.js', 'Express.js'].map((skill, i) => (
                   <div key={i} className="flex items-center gap-3 text-neutral-400 text-xs font-mono group-hover:translate-x-1 transition-transform">
                     <span className="w-1 h-1 bg-blue-500" />
                     {skill}
@@ -569,7 +774,7 @@ export default function Home() {
                 <h3 className="font-black text-sm uppercase tracking-widest text-green-400">Tools</h3>
               </div>
               <div className="space-y-3">
-                {['Git', 'Docker', 'PostgreSQL', 'MySQL', 'REST APIs', 'WebUI API'].map((skill, i) => (
+                {['Git', 'Docker', 'PostgreSQL', 'MySQL', 'SQLite', 'Firebase', 'REST APIs', 'jsPDF', 'Chart.js', 'node-cron'].map((skill, i) => (
                   <div key={i} className="flex items-center gap-3 text-neutral-400 text-xs font-mono group-hover:translate-x-1 transition-transform">
                     <span className="w-1 h-1 bg-green-500" />
                     {skill}
@@ -589,10 +794,16 @@ export default function Home() {
                 'System Integration',
                 'Backend Development',
                 'Web Development',
+                'Desktop Apps (Electron)',
+                'POS System Development',
                 'Data Structures',
                 'RESTful APIs',
                 'Database Design',
                 'Real-time Processing',
+                'WordPress / WooCommerce',
+                'E-commerce Development',
+                'PDF Generation (jsPDF)',
+                'Role-based Access Control',
                 'Project Management',
                 'Leadership'
               ].map((competency, i) => (
@@ -675,7 +886,7 @@ export default function Home() {
             {/* Contact Info */}
             <div className="space-y-4">
               {[
-                { label: 'EMAIL_UPLINK', val: 'mdadeeb.2005@gmail.com', href: 'mailto:mdadeeb.2005@gmail.com', icon: <Mail size={20} />, var: 'cyber' },
+                { label: 'EMAIL_UPLINK', val: 'mdadeeb.2003@gmail.com', href: 'mailto:mdadeeb.2003@gmail.com', icon: <Mail size={20} />, var: 'cyber' },
                 { label: 'COMMS_CHANNEL', val: '+91 7290842408', href: 'tel:+917290842408', icon: <Phone size={20} />, var: 'cyber-reverse' },
                 { label: 'NET_PROFILE', val: 'Dewolf1', href: 'https://github.com/Dewolf1', icon: <Github size={20} />, var: 'cyber' }
               ].map((item, i) => (

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://mohdadeeb.onrender.com/sitemap.xml
+
+# Crawl-delay (optional — respects bots)
+Crawl-delay: 1
