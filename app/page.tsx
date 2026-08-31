@@ -51,7 +51,7 @@ export default function Home() {
               <a href="https://github.com/Dewolf1" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">
                 <Github size={18} />
               </a>
-              <a href="https://linkedin.com/in/mohd-adeeb" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">
+              <a href="https://linkedin.com/in/mohd-adeeb-2b43892ab" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">
                 <Linkedin size={18} />
               </a>
               <button

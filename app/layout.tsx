@@ -176,7 +176,7 @@ const jsonLd = {
       email: "mdadeeb.2003@gmail.com",
       sameAs: [
         "https://github.com/Dewolf1",
-        "https://linkedin.com/in/mohd-adeeb",
+        "https://linkedin.com/in/mohd-adeeb-2b43892ab",
         "https://jenw.in",
         "https://www.herlyy.com",
         BASE_URL,
