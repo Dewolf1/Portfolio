@@ -141,7 +141,7 @@ export default function Home() {
       <section className="py-24 border-y border-neutral-800/50 bg-neutral-900/10 relative">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-            {[{ v: '8.23', l: 'GPA', c: 'from-cyan-400 to-blue-600' }, { v: '6+', l: 'Certifications', c: 'from-purple-400 to-pink-600' }, { v: '15+', l: 'Projects', c: 'from-blue-400 to-cyan-600' }].map((s, i) => (
+            {[{ v: '8.23', l: 'GPA', c: 'from-cyan-400 to-blue-600' }, { v: '7+', l: 'Certifications', c: 'from-purple-400 to-pink-600' }, { v: '15+', l: 'Projects', c: 'from-blue-400 to-cyan-600' }].map((s, i) => (
               <div key={i} className="group relative py-8">
                 <div className={`absolute inset-0 bg-gradient-to-r ${s.c} opacity-0 group-hover:opacity-5 blur-2xl transition-all duration-500`} />
                 <div className={`text-5xl md:text-7xl font-black bg-gradient-to-r ${s.c} bg-clip-text text-transparent tracking-tighter`}>{s.v}</div>
@@ -832,6 +832,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {[
+              { title: 'Artificial Intelligence', provider: 'SAMSUNG INNOVATION CAMPUS', date: 'Jan 2026', badge: '🧠', color: 'from-blue-600 to-indigo-600', link: 'https://printing.aaskill.com/tssc/verify.aspx?id=94A62118-959', credentialId: '94A62118-959', logo: '/samsung.jpeg' },
               { title: 'OCI 2025 GenAI Professional', provider: 'ORACLE', date: 'Oct 2025', badge: '⚡', color: 'from-orange-500 to-red-500', link: 'https://catalog-education.oracle.com/ords/certview/sharebadge?id=5985600D4313FD5EA4612F53A10832219ADD06E7A67C27AA425796A971F975A5' },
               { title: 'AI Agents Intensive Course', provider: 'GOOGLE/KAGGLE', date: 'Dec 2025', badge: '🤖', color: 'from-blue-500 to-cyan-500', link: 'https://www.kaggle.com/learn/certification/mohdadeeb/intro-to-ai-agents' },
               { title: 'OCI 2025 AI Foundations', provider: 'ORACLE', date: 'Oct 2025', badge: '🎯', color: 'from-purple-500 to-pink-500', link: 'https://catalog-education.oracle.com/ords/certview/sharebadge?id=81771B42AAEAF25902F69382898C0300F76B46096DB112DDBBFD2DFC835B10C7' },
@@ -841,8 +842,11 @@ export default function Home() {
             ].map((cert, i) => (
               <Card key={i} variant={i % 2 === 0 ? 'cyber' : 'cyber-reverse'} className="p-8 group hover:scale-[1.02] transition-all duration-300">
                 <div className="flex gap-6 relative">
-                  <div className={`p-4 bg-gradient-to-br ${cert.color} rounded-sm h-fit flex items-center justify-center text-2xl group-hover:scale-110 transition-transform`}>
-                    {cert.badge}
+                  <div className={`${(cert as any).logo ? 'p-1 bg-white' : `p-4 bg-gradient-to-br ${cert.color}`} rounded-sm h-fit flex items-center justify-center text-2xl group-hover:scale-110 transition-transform overflow-hidden`}>
+                    {(cert as any).logo
+                      ? <img src={(cert as any).logo} alt={`${cert.provider} logo`} className="w-14 h-14 object-contain" />
+                      : cert.badge
+                    }
                   </div>
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-2">
